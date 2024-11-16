@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redirect</title>
+    <script>
+        const urls = [
+            "https://umac.au1.qualtrics.com/jfe/form/SV_cIxXCWk0qw2JIr4",
+            "https://umac.au1.qualtrics.com/jfe/form/SV_5p7X3KiHMT9GlSK",
+            "https://umac.au1.qualtrics.com/jfe/form/SV_5hgspEBorJkN5eC"
+        ];
+
+        function randomRedirect() {
+            const randomIndex = Math.floor(Math.random() * urls.length);
+            window.location.href = urls[randomIndex];
+        }
+
+        window.onload = randomRedirect;
+    </script>
+</head>
+<body>
+    <h1>Loading...</h1>
+    <p>If you are not redirected automatically, <a href="javascript:randomRedirect()">click here</a>.</p>
+</body>
+</html>
